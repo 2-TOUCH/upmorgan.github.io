@@ -175,6 +175,20 @@
             font-size: 1.5rem;
         }
 
+        .project-card .project-title {
+            text-decoration: none;
+        }
+
+        .project-card .project-title h3 {
+            color: var(--primary-color); 
+            transition: color 0.3s ease; 
+        }
+
+        .project-card .project-title:hover h3 {
+            color: #ffffff;
+            filter: brightness(1.2); 
+        }
+
         .project-info p {
             font-size: 1.1rem;
             margin-bottom: 15px;
@@ -253,7 +267,9 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <div class="project-info">
-                        <a href = "#"><h3 class = "fa-external-link-alt">Elegant Algorithm</h3></a>
+                        <a href="https://your-project-url.com" class="project-title">
+                            <h3>Elegant Algorithm</h3>
+                        </a>
                         <p>A sophisticated solution to complex computational challenges.</p>
                         <div class="project-links">
                             <a href="#"><i class="fab fa-github"></i> GitHub</a>
