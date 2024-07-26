@@ -6,7 +6,7 @@
     <title>Your Name - Code Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Pacifico&display=swap');
 
         :root {
             --primary-color: #f1c40f;
@@ -76,26 +76,67 @@
         }
 
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%), url('/api/placeholder/1200/800') center/cover no-repeat;
-            padding-top: 80px;
+            background-color: var(--bg-color);
+            padding: 100px 0;
         }
 
-        .hero-content h1 {
-            font-size: 4rem;
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
             margin-bottom: 20px;
             animation: fadeInUp 1s ease;
             color: var(--primary-color);
         }
 
-        .hero-content p {
-            font-size: 1.5rem;
+        .hero-text p {
+            font-size: 1.3rem;
             margin-bottom: 30px;
             animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            animation: fadeIn 1s ease 1s both;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 20px;
+            right: -20px;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: 'Pacifico', cursive;
+            font-size: 1rem;
+            transform: rotate(-5deg);
+        }
+
+        .image-caption::before {
+            content: '←';
+            margin-right: 5px;
         }
 
         .cta-button {
@@ -196,6 +237,11 @@
             padding: 20px 0;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -208,11 +254,23 @@
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
+            .hero-content {
+                flex-direction: column;
             }
-            .hero-content p {
-                font-size: 1.2rem;
+            .hero-text {
+                padding-right: 0;
+                padding-bottom: 40px;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+            .image-caption {
+                right: 10px;
+                bottom: 10px;
             }
             .projects {
                 grid-template-columns: 1fr;
@@ -233,10 +291,17 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Your Name</h1>
-            <p>Elegant Code Craftsmanship</p>
-            <a href="#projects" class="cta-button">Explore My Work</a>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Your Name</h1>
+                <p>Elegant Code Craftsmanship</p>
+                <p>I'm a passionate developer with a knack for creating elegant solutions to complex problems. Welcome to my digital playground where code meets creativity!</p>
+                <a href="#projects" class="cta-button">Explore My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="graduation-photo.jpg" alt="Your Name at graduation ceremony" />
+                <div class="image-caption">This is me! I'm bad at smiling in photos</div>
+            </div>
         </div>
     </section>
 
