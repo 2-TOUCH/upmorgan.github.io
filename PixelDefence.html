@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Number</h1>
+        <p>Try to guess the number between 1 and 100!</p>
+        <input type="number" id="guessInput" min="1" max="100">
+        <button onclick="makeGuess()">Submit Guess</button>
+        <p id="result"></p>
+        <p id="attempts"></p>
+        <button onclick="resetGame()">New Game</button>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        var initGame;
+        var makeGuessWASM;
+        var getAttempts;
+
+        Module.onRuntimeInitialized = function() {
+            initGame = Module.cwrap('initGame', null, []);
+            makeGuessWASM = Module.cwrap('makeGuess', 'number', ['number']);
+            getAttempts = Module.cwrap('getAttempts', 'number', []);
+            resetGame();
+        };
+
+        function resetGame() {
+            initGame();
+            document.getElementById('result').textContent = '';
+            document.getElementById('attempts').textContent = '';
+            document.getElementById('guessInput').value = '';
+        }
+
+        function makeGuess() {
+            var guess = parseInt(document.getElementById('guessInput').value);
+            var result = makeGuessWASM(guess);
+            var resultText = '';
+            if (result === -1) {
+                resultText = 'Too low! Try again.';
+            } else if (result === 1) {
+                resultText = 'Too high! Try again.';
+            } else {
+                resultText = 'Congratulations! You guessed it!';
+            }
+            document.getElementById('result').textContent = resultText;
+            document.getElementById('attempts').textContent = 'Attempts: ' + getAttempts();
+        }
+    </script>
+</body>
+</html>
