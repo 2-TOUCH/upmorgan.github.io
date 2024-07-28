@@ -147,6 +147,27 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
+        .graph-container {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .graph-container h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .graph-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
         .skills-list {
             display: flex;
             flex-wrap: wrap;
@@ -197,6 +218,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#algorithm">Algorithm</a></li>
+                <li><a href="#graphs">Graphs</a></li>
                 <li><a href="#skills">Skills</a></li>
             </ul>
         </nav>
@@ -246,6 +268,18 @@ opt = Adam(learning_rate=1e-04)
 ensemble_model.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])
                     </pre>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="graphs" class="section">
+        <div class="container">
+            <h2 class="section-title">Interesting Graphs</h2>
+            <div class="graph-container">
+                <h3>Top 20 Feature Importances</h3>
+                <p>This graph shows the top 20 most important features in our model for classifying reviews as either Barbie or Oppenheimer.</p>
+                <img src="/api/placeholder/800/600" alt="Top 20 Feature Importances" class="graph-image">
+                <p>The x-axis represents the feature names, while the y-axis shows the importance score. Higher bars indicate features that have a greater impact on the model's decision-making process.</p>
             </div>
         </div>
     </section>
