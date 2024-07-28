@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulysses Morgan - ML Algorithm Showcase</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #f1c40f;
+            --text-color: #e0e0e0;
+            --bg-color: #121212;
+            --card-bg-color: #1e1e1e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%), url('/api/placeholder/1200/800') center/cover no-repeat;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+            color: var(--primary-color);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.5s both;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .algorithm-details {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .algorithm-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .algorithm-details p, .algorithm-details ul {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .algorithm-details ul {
+            padding-left: 20px;
+        }
+
+        .code-snippet {
+            background-color: #2a2a2a;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-snippet pre {
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Ulysses Morgan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#algorithm">Algorithm</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ML Algorithm Showcase</h1>
+            <p>Barbie vs Oppenheimer: IMDB Review Classifier</p>
+        </div>
+    </section>
+
+    <section id="algorithm" class="section">
+        <div class="container">
+            <h2 class="section-title">The Algorithm</h2>
+            <div class="algorithm-details">
+                <h3>Binary Classification for IMDB Reviews</h3>
+                <p>This machine learning algorithm solves a binary classification problem, determining whether an IMDB review is for the movie "Barbie" or "Oppenheimer". The project achieves over 90% accuracy using ensemble and decision tree algorithms.</p>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Tokenization to use words as features</li>
+                    <li>Additional variables like review length</li>
+                    <li>Ensemble model combining BERT, Bag of Words, and ANN</li>
+                    <li>Decision tree classifier for interpretability</li>
+                </ul>
+                <h3>Data Processing:</h3>
+                <ul>
+                    <li>Cleaning and preprocessing of IMDB review data</li>
+                    <li>Feature extraction from review text and metadata</li>
+                    <li>Data exploration and visualization</li>
+                </ul>
+                <h3>Model Architecture:</h3>
+                <ul>
+                    <li>BERT (Bidirectional Encoder Representations from Transformers)</li>
+                    <li>Bag of Words with Decision Tree</li>
+                    <li>Artificial Neural Network (ANN)</li>
+                    <li>Custom ensemble model combining the above</li>
+                </ul>
+                <div class="code-snippet">
+                    <pre>
+# Ensemble model architecture
+ensemble_model = Sequential()
+ensemble_model.add(Dense(units=3, activation='sigmoid', input_shape=(ensemble_X_train.shape[1],)))
+ensemble_model.add(Dense(units=1, activation='sigmoid'))
+
+opt = Adam(learning_rate=1e-04)
+ensemble_model.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills Utilized</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Keras</span>
+                <span class="skill-tag">BERT</span>
+                <span class="skill-tag">Natural Language Processing</span>
+                <span class="skill-tag">Data Cleaning</span>
+                <span class="skill-tag">Feature Engineering</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Ensemble Methods</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">Matplotlib</span>
+                <span class="skill-tag">Seaborn</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ulysses Morgan. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
