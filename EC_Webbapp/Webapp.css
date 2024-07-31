@@ -1,0 +1,22 @@
+#architecture-diagram {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#architecture-diagram svg {
+    width: 100%;
+    height: auto;
+}
+
+.fill-secondary-color {
+    fill: var(--secondary-color);
+}
+
+.fill-card-bg-color {
+    fill: var(--card-bg-color);
+}
+
+.stroke-primary-color {
+    stroke: var(--primary-color);
+}

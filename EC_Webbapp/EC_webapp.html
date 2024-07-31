@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulysses Morgan - ECOCar Webaplication</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="Webapp.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">UM</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#Description">Description</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ML Algorithm Showcase</h1>
+            <p>Barbie vs Oppenheimer: IMDB Review Classifier</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills Utilized</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Keras</span>
+                <span class="skill-tag">BERT</span>
+                <span class="skill-tag">Natural Language Processing</span>
+                <span class="skill-tag">Data Cleaning</span>
+                <span class="skill-tag">Feature Engineering</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Ensemble Methods</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">Matplotlib</span>
+                <span class="skill-tag">Seaborn</span>
+            </div>
+        </div>
+    </section>
+    <section id = "Description" class="section">
+        <div class="container">
+            <h2 class="Description">Description</h2>
+            <p>This project aims to classify movie reviews as either about "Barbie" or "Oppenheimer" using review data from IMDb provided on Kaggle. The dataset includes textual reviews and 1-10 scale scores. The objective is to identify which movie a given review is for using supervised learning models like linear regression or deep learning. Additionally, we plan to extract new features like word count and average word length and might use unsupervised learning to find useful patterns. A potential challenge is the mention of both movies in reviews, necessitating more thorough data cleaning.
+            </p>
+        </div>    
+    </section>
+    
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ulysses Morgan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="character-menu-toggle">
+        <i class="fas fa-gamepad"></i>
+    </div>
+
+    <div id="character-menu">
+        <label>
+            <input type="checkbox" id="dog-checkbox" onchange="toggleCharacter('dog')" checked> Dog
+        </label>
+        <label>
+            <input type="checkbox" id="mario-checkbox" onchange="toggleCharacter('mario')"> Mario
+        </label>
+        <label>
+            <input type="checkbox" id="fox-checkbox" onchange="toggleCharacter('fox')"> Fox
+        </label>
+        <label>
+            <input type="checkbox" id="goomba-checkbox" onchange="toggleCharacter('goomba')"> Goomba
+        </label>
+    </div>
+
+    
+    <div id="character-container"></div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
