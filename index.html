@@ -14,6 +14,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About me</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -24,6 +25,18 @@
             <h1>Ulysses Morgan</h1>
             <p>Hi! This is my personal website used to showcase some of the Projects I've done in the past!</p>
             <a href="#projects" class="cta-button">Explore My Work</a>
+            <div class="social-links">
+                <div class="social-link">
+                    <a href="https://github.com/2-TOUCH" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="social-link">
+                    <a href="https://www.linkedin.com/in/ulyssesmorgan/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -87,10 +100,64 @@
         </div>
     </section>
 
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hey there! I'm Ulysses Morgan, a passionate software developer with a knack for turning complex problems into elegant solutions. My experince is mostly with Full Stack Development but I also like to mess with ML! </p>
+                    <ul>
+                        <li><i class="fas fa-futbol"></i> Love playing soccer, played as vice caption for my varsity soccer team in highschool </li>
+                        <li><i class="fas fa-user"></i> Born in Raised in Japan all my life, currently living in Davis!</li>
+                        <li><i class="fas fa-dog"></i> Love my dog, her name is Koku</li>
+                        <li><i class="fas fa-sheild"></i> Playing double Visage Sheild in Elden Ring</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <h3>Quick Stats</h3>
+                    <div class="stat">
+                        <span class="stat-label">Caffeine consumed while coding:</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Bugs squashed:</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Dog photos added to phone</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-gallery">
+                <h3>A Glimpse into My World</h3>
+                <div class="gallery-grid">
+                    <img src="Resources\dog1.jpg" alt="Description of image 1" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="Resources\dog2.jpg" alt="Description of image 2" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="Resources\snowboard2.JPG" alt="Description of image 3" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="Resources\SnowBoard1.jpg" alt="Description of image 4" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="Resources\food1.JPG" alt="Description of image 5" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="Resources\general1.JPG" alt="Description of image 6" class="gallery-img" onclick="openModal(this.src)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
-            <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Would love to hear from you, whether to collaborate with something or job opprotunities</p>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Would love to hear from you, Give me suggestions for things to add! or job opprotunities</p>
             <div style="text-align: center;">
                 <a href="mailto:ulyssesmorgan20020103@gmail.com" class="cta-button">Reach Out</a>
             </div>
@@ -122,7 +189,6 @@
             <p>&copy; 2024 Ulysses Morgan. All rights reserved.</p>
         </div>
     </footer>
-
 
     <div id="character-container"></div>
     <script src="idscript.js"></script>
