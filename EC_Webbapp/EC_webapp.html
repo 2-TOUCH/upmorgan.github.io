@@ -6,9 +6,7 @@
     <title>Ulysses Morgan - ECOCar Webaplication</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="Webapp.css">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"></head>
 <body>
     <header>
         <nav class="container">
@@ -23,8 +21,8 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>ML Algorithm Showcase</h1>
-            <p>Barbie vs Oppenheimer: IMDB Review Classifier</p>
+            <h1>Full Stack Application</h1>
+            <p>ECOCar onboarding application</p>
         </div>
     </section>
 
@@ -32,35 +30,113 @@
         <div class="container">
             <h2 class="section-title">Skills Utilized</h2>
             <div class="skills-list">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">PostgreSQL</span>
                 <span class="skill-tag">Python</span>
-                <span class="skill-tag">Pandas</span>
-                <span class="skill-tag">NumPy</span>
-                <span class="skill-tag">Scikit-learn</span>
-                <span class="skill-tag">TensorFlow</span>
-                <span class="skill-tag">Keras</span>
-                <span class="skill-tag">BERT</span>
-                <span class="skill-tag">Natural Language Processing</span>
-                <span class="skill-tag">Data Cleaning</span>
-                <span class="skill-tag">Feature Engineering</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Deep Learning</span>
-                <span class="skill-tag">Ensemble Methods</span>
-                <span class="skill-tag">Data Visualization</span>
-                <span class="skill-tag">Matplotlib</span>
-                <span class="skill-tag">Seaborn</span>
+                <span class="skill-tag">Apache Airflow</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Google API Integration</span>
+                <span class="skill-tag">Jira API</span>
+                <span class="skill-tag">DocuSign API</span>
+                <span class="skill-tag">Email Automation</span>
+                <span class="skill-tag">Database Management</span>
+                <span class="skill-tag">RESTful API Development</span>
+                <span class="skill-tag">Environment Configuration</span>
+                <span class="skill-tag">Authentication & Security</span>
+                <span class="skill-tag">Workflow Automation</span>
+                <span class="skill-tag">Full Stack Development</span>
+                <span class="skill-tag">DevOps</span>
+                <span class="skill-tag">System Integration</span>
             </div>
         </div>
     </section>
     <section id = "Description" class="section">
         <div class="container">
             <h2 class="Description">Description</h2>
-            <p>This project aims to classify movie reviews as either about "Barbie" or "Oppenheimer" using review data from IMDb provided on Kaggle. The dataset includes textual reviews and 1-10 scale scores. The objective is to identify which movie a given review is for using supervised learning models like linear regression or deep learning. Additionally, we plan to extract new features like word count and average word length and might use unsupervised learning to find useful patterns. A potential challenge is the mention of both movies in reviews, necessitating more thorough data cleaning.
+            <p>This web application facilitates the onboarding process for new members of the ECOCAR team by allowing them to fill out an interest form. It integrates with Google Forms, Jira, and DocuSign to streamline member application and approval workflows. The application is fully containerized
             </p>
         </div>    
     </section>
     
+    <section id="architecture" class="section">
+        <div class="container">
+            <h2 class="section-title">Application Architecture</h2>
+            <div class="architecture-content">
+                <div id="architecture-diagram" class="diagram-container">
+                    <svg viewBox="0 0 750 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="boxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8c7ae6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="dropShadow">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                                <feOffset dx="2" dy="2" result="offsetblur" />
+                                <feComponentTransfer>
+                                    <feFuncA type="linear" slope="0.3" />
+                                </feComponentTransfer>
+                                <feMerge>
+                                    <feMergeNode />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
     
-
+                        <!-- Background pattern -->
+                        <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#2c2c2c" stroke-width="0.5" />
+                        </pattern>
+                        <rect width="100%" height="100%" fill="url(#smallGrid)" />
+    
+                        <!-- Diagram elements -->
+                        <rect x="20" y="50" width="120" height="80" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)" />
+                        <text x="80" y="95" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Postgres DB
+                        </text>
+                        
+                        <circle cx="270" cy="90" r="50" fill="url(#boxGradient)" filter="url(#dropShadow)"  />
+                        <text x="270" y="95" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">AirFlow</text>
+                        
+                        <rect x="20" y="200" width="120" height="80" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)"  />
+                        <text x="80" y="245" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Back End Server</text>
+                        
+                        <rect x="20" y="350" width="120" height="80" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)" />
+                        <text x="80" y="390" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">
+                            <tspan x="80" dy="-10">Front End</tspan>
+                            <tspan x="80" dy="20">Admin Page</tspan>
+                        </text>
+                        
+                        <rect x="210" y="350" width="120" height="80" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)" />
+                        <text x="270" y="395" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Google Forum</text>
+                        
+                        <!-- Connections -->
+                        <line x1="140" y1="90" x2="220" y2="90" stroke="#ffffff" stroke-width="2" />
+                        <line x1="270" y1="140" x2="270" y2="350" stroke="#ffffff" stroke-width="2" />
+                        <line x1="80" y1="130" x2="80" y2="200" stroke="#ffffff" stroke-width="2" />
+                        <line x1="80" y1="280" x2="80" y2="350" stroke="#ffffff" stroke-width="2" />
+    
+                        <!-- Bullet point boxes -->
+                        <rect x="420" y="50" width="300" height="60" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)"  />
+                        <text x="440" y="85" fill="#ffffff" font-size="14" font-weight="bold">1. Gather Member Data</text>
+                            
+                        <rect x="420" y="130" width="300" height="60" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)"  />
+                        <text x="440" y="165" fill="#ffffff" font-size="14" font-weight="bold">2.Store using DAG flows</text>
+    
+                        <rect x="420" y="210" width="300" height="60" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)"  />
+                        <text x="440" y="245" fill="#ffffff" font-size="12" font-weight="bold">3. Airflow, automate emails, docusign, etc</text>
+    
+                        <rect x="420" y="290" width="300" height="60" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)"  />
+                        <text x="440" y="325" fill="#ffffff" font-size="12" font-weight="bold">4. User Interface for managing who joins</text>
+    
+                        <rect x="420" y="370" width="300" height="60" rx="10" fill="url(#boxGradient)" filter="url(#dropShadow)"  />
+                        <text x="440" y="405" fill="#ffffff" font-size="13" font-weight="bold">5. Automate Atlassian account creation</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+       
     <footer>
         <div class="container">
             <p>&copy; 2024 Ulysses Morgan. All rights reserved.</p>
@@ -88,8 +164,6 @@
 
     
     <div id="character-container"></div>
-
-    
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

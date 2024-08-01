@@ -1,10 +1,9 @@
 const characters = {
-    dog: { imageSrc: 'Resources/dog.gif', width: 62, height: 62, speed: 5, zIndex: 10000 },
-    mario: { imageSrc: 'Resources/mario.gif', width: 52, height: 52, speed: 7, zIndex: 9999 },
-    fox: { imageSrc: 'Resources/fox.gif', width: 42, height: 42, speed: 6, zIndex: 10001 },
-    goomba: { imageSrc: 'Resources/goomba.gif', width: 42, height: 42, speed: 3, zIndex: 10002 }
+    dog: { imageSrc: '/Resources/dog.gif', width: 62, height: 62, speed: 5, zIndex: 10000 },
+    mario: { imageSrc: '/Resources/mario.gif', width: 52, height: 52, speed: 7, zIndex: 9999 },
+    fox: { imageSrc: '/Resources/fox.gif', width: 42, height: 42, speed: 6, zIndex: 10001 },
+    goomba: { imageSrc: '/Resources/goomba.gif', width: 42, height: 42, speed: 3, zIndex: 10002 }
 };
-
 
 
 const activeCharacters = {};

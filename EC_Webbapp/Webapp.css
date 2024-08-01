@@ -20,3 +20,39 @@
 .stroke-primary-color {
     stroke: var(--primary-color);
 }
+
+
+.architecture-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.diagram-container {
+    width: 100%;
+    max-width: 750px;
+}
+
+.diagram-container svg {
+    width: 100%;
+    height: auto;
+}
+
+
+
+#architecture {
+    padding: 60px 0;
+    background-color: #1a1a1a;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
